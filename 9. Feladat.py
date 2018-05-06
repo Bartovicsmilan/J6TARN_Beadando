@@ -1,4 +1,4 @@
-number=600851475143
+number=179425889
 
 ### Prím szám: 179425889
 ### Feladat: 600851475143
@@ -34,12 +34,15 @@ def LargestPrimeFactor(numb):
     p=2
     # if IsPrime(numb) is True:
     #     return numb
+    if left%p==0:
+        left=left/p
+    p+=1
     while left!=p:
         if left%p==0:#and IsPrime(p)
             left=left/p
             '''print(p)'''
         else:
-            p+=1
+            p+=2
     return p
 
 
