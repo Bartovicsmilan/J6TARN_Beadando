@@ -27,24 +27,24 @@ def LargestPrime(n):
 
 
 
-'''
+
 def LargestPrimeFactorOptimazed(numb):
     left=numb
     p=3
-    while left%2==1 or left==2:
+    while left%2==0:
         left=left/2
-        print(left)
-    print('out')
-    if left==2:
+    #     print(left)
+    # print('out')
+    if left==1:
         return 2
     while left!=p:
         if left%p==0:#and IsPrime(p)
             left=left/p
-            print(p)
+            # print(p)
         else:
             p+=2
     return p
-'''
+
 
 
 def LargestPrimeFactor(numb):
@@ -61,4 +61,4 @@ def LargestPrimeFactor(numb):
 
 print(LargestPrimeFactor(number))
 
-# print(LargestPrimeFactorOptimazed(number))
+print(LargestPrimeFactorOptimazed(number))
