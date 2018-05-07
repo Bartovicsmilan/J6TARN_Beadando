@@ -1,4 +1,4 @@
-word='vsrbkeretkaraktereksv'
+word='vsrbkere tkaraKte reksv'
 
 def PalindromOrNot(word):
     h=len(word)
@@ -15,10 +15,19 @@ def PalindromOrNot(word):
             return False
 
 # print(PalindromOrNot(word))
+def stringwithjustSrt(w):
+    newW=''
+    for i in w:
+        if 'a'<= i <='z':
+            newW+=i
+        elif 'A' <= i <='Z':
+            newW+=i.lower()
+    return newW
 
 
 def AllFormations(word):
     h=len(word)
+    word=stringwithjustSrt(word)
     ph=0
     longest=''
     for i in range(h+1):
